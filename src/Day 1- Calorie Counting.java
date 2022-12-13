@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class CalorieCounting {
     public static void main(String[] args) throws FileNotFoundException {
-        PriorityQueue<Integer> calories = getCaloriesCounts("input.txt");
+        PriorityQueue<Integer> calories = getCaloriesCounts("day1_input.txt");
         // part 1
         int result1 = calories.peek();
         System.out.println(result1);
