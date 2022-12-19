@@ -8,7 +8,32 @@ class NoSpaceLeftOnDevice {
     private static final int DAY = 7;
 
     public static void main(String[] args) throws FileNotFoundException {
-        lessThan100_000Sum("day" + DAY + "_input.txt");
+        //lessThan100_000Sum("day" + DAY + "_input.txt");
+        deleteLargestBoundedFile("day" + DAY + "_input.txt");
+    }
+
+    private static void deleteLargestBoundedFile(String fileName) throws FileNotFoundException {
+        File f = new File(fileName);
+        Scanner s = new Scanner(f);
+        Directory root = new Directory(true, null, "/", 0);
+        createTree(s, root);
+        System.out.println(findBoundedFile(root, root.size, 40_000_000));
+    }
+
+    private static int findBoundedFile(Directory d, int spaceUsed, int usableSpace) {
+        int min = Integer.MAX_VALUE;
+        if (d.children != null) {
+            for (Directory child : d.children) {
+                int cur = findBoundedFile(child, spaceUsed, usableSpace);
+                if (cur < min) {
+                    min = cur;
+                }
+            }
+        }
+        if (min == Integer.MAX_VALUE && spaceUsed - d.size <= usableSpace) {
+            return d.size;
+        }
+        return min;
     }
 
     private static void lessThan100_000Sum(String fileName) throws FileNotFoundException {
@@ -20,20 +45,18 @@ class NoSpaceLeftOnDevice {
     }
 
     private static int sumWithCondition(Directory d, int bound) {
+        int sum = 0;
         if (d != null) {
             if (d.children != null) {
-                int sum = 0;
+                if (d.size <= bound) {
+                    sum = d.size;
+                }
                 for (Directory child : d.children) {
                     sum += sumWithCondition(child, bound);
                 }
-                return sum;
-            }
-            if (d.size <= bound) {
-                System.out.println(d);
-                return d.size;
             }
         }
-        return 0;
+        return sum;
     }
 
     private static void createTree(Scanner s, Directory root) {
@@ -53,9 +76,17 @@ class NoSpaceLeftOnDevice {
             if (tokens[0].equals("dir")) {
                 current.children.add(new Directory(true, current, tokens[1], 0));
             } else {
-                current.children.add(
-                        new Directory(false, current, tokens[1], Integer.parseInt(tokens[0])));
+                int fileSize = Integer.parseInt(tokens[0]);
+                current.children.add(new Directory(false, current, tokens[1], fileSize));
+                addFileSize(current, fileSize);
             }
+        }
+    }
+
+    private static void addFileSize(Directory current, int fileSize) {
+        current.size += fileSize;
+        if (current.parent != null) {
+            addFileSize(current.parent, fileSize);
         }
     }
 
