@@ -9,7 +9,7 @@ class MonkeyInTheMiddle {
     private static final int DAY = 11;
 
     public static void main(String[] args) throws FileNotFoundException {
-        countInspections("2022/day" + DAY + "_input.txt");
+        countInspections("2022 Input/day" + DAY + "_input.txt");
     }
 
     private static void countInspections(String fileName) throws FileNotFoundException {

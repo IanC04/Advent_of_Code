@@ -13,8 +13,8 @@ class CathodeRayTube {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(signalStrengthsBounded("2022/day" + DAY + "_input.txt"));
-        char[][] screen = createCRTScreen("2022/day" + DAY + "_input.txt");
+        //System.out.println(signalStrengthsBounded("2022 Input/day" + DAY + "_input.txt"));
+        char[][] screen = createCRTScreen("2022 Input/day" + DAY + "_input.txt");
         for (char[] line : screen) {
             System.out.println(Arrays.toString(line));
         }

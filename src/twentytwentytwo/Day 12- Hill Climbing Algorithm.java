@@ -13,8 +13,8 @@ class HillClimbingAlgorithm {
     private static final int[][] directions = {{-1, 0, 1, 0}, {0, 1, 0, -1}};
 
     public static void main(String[] args) throws FileNotFoundException {
-        // shortestPathLength("2022/day" + DAY + "_input.txt");
-        shortestALength("2022/day" + DAY + "_input.txt");
+        // shortestPathLength("2022 Input/day" + DAY + "_input.txt");
+        shortestALength("2022 Input/day" + DAY + "_input.txt");
     }
 
     private static void shortestPathLength(String fileName) throws FileNotFoundException {

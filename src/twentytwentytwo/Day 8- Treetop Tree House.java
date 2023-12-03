@@ -9,8 +9,8 @@ class TreetopTreeHouse {
     private static final int DAY = 8;
 
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(visibleTrees("2022/day" + DAY + "_input.txt"));
-        System.out.println(treeDistance("2022/day" + DAY + "_input.txt"));
+        //System.out.println(visibleTrees("2022 Input/day" + DAY + "_input.txt"));
+        System.out.println(treeDistance("2022 Input/day" + DAY + "_input.txt"));
     }
 
     private static int visibleTrees(String fileName) throws FileNotFoundException {

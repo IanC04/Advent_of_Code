@@ -10,8 +10,8 @@ class NoSpaceLeftOnDevice {
     private static final int DAY = 7;
 
     public static void main(String[] args) throws FileNotFoundException {
-        //lessThan100_000Sum("2022/day" + DAY + "_input.txt");
-        deleteLargestBoundedFile("2022/day" + DAY + "_input.txt");
+        //lessThan100_000Sum("2022 Input/day" + DAY + "_input.txt");
+        deleteLargestBoundedFile("2022 Input/day" + DAY + "_input.txt");
     }
 
     private static void deleteLargestBoundedFile(String fileName) throws FileNotFoundException {

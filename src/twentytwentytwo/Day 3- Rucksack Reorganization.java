@@ -14,8 +14,8 @@ class RucksackReorganization {
 
     private static HashSet<Character> alreadyFound;
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(maxScorePart1("2022/day3_input.txt"));
-        System.out.println(maxScorePart2("2022/day3_input.txt"));
+        //System.out.println(maxScorePart1("2022 Input/day3_input.txt"));
+        System.out.println(maxScorePart2("2022 Input/day3_input.txt"));
     }
 
     private static int maxScorePart1(String fileName) throws FileNotFoundException {

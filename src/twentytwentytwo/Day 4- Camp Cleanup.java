@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 class CampCleanup {
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(numContains("2022/day4_input.txt"));
-        System.out.println(numOverlap("2022/day4_input.txt"));
+        //System.out.println(numContains("2022 Input/day4_input.txt"));
+        System.out.println(numOverlap("2022 Input/day4_input.txt"));
     }
 
     private static int numContains(String fileName) throws FileNotFoundException {

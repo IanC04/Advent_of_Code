@@ -12,8 +12,8 @@ class SupplyStacks {
     private static ArrayList<Stack<Character>> crateStacks;
 
     public static void main(String[] args) throws FileNotFoundException {
-        //topCrates("2022/day5_input.txt", false);
-        topCrates("2022/day5_input.txt", true);
+        //topCrates("2022 Input/day5_input.txt", false);
+        topCrates("2022 Input/day5_input.txt", true);
         for (Stack<Character> crateStack : crateStacks) {
             System.out.print(crateStack.peek());
         }
