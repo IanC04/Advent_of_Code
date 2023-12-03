@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -12,8 +14,8 @@ class RucksackReorganization {
 
     private static HashSet<Character> alreadyFound;
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(maxScorePart1("day3_input.txt"));
-        System.out.println(maxScorePart2("day3_input.txt"));
+        //System.out.println(maxScorePart1("2022/day3_input.txt"));
+        System.out.println(maxScorePart2("2022/day3_input.txt"));
     }
 
     private static int maxScorePart1(String fileName) throws FileNotFoundException {

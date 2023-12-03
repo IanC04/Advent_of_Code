@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -17,8 +19,8 @@ class RockPaperScissors {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(maxScorePart1("day2_input.txt"));
-        System.out.println(maxScorePart2("day2_input.txt"));
+        //System.out.println(maxScorePart1("2022/day2_input.txt"));
+        System.out.println(maxScorePart2("2022/day2_input.txt"));
     }
 
     private static int maxScorePart1(String fileName) throws FileNotFoundException {

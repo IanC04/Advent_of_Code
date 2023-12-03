@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
@@ -6,8 +8,8 @@ class TuningTrouble {
     private static final int DAY = 6;
 
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(firstFourPacket("day" + DAY + "_input.txt"));
-        System.out.println(firstFourteenPacket("day" + DAY + "_input.txt"));
+        //System.out.println(firstFourPacket("2022/day" + DAY + "_input.txt"));
+        System.out.println(firstFourteenPacket("2022/day" + DAY + "_input.txt"));
     }
 
     private static int firstFourPacket(String fileName) throws FileNotFoundException {

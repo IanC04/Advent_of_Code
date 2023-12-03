@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +11,7 @@ class RopeBridge {
     private static final int DAY = 9;
 
     public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(visitedCells("day" + DAY + "_input.txt", 10));
+        System.out.println(visitedCells("2022/day" + DAY + "_input.txt", 10));
     }
 
     private static int visitedCells(String fileName, int numRopes) throws FileNotFoundException {

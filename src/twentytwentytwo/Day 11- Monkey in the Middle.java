@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ class MonkeyInTheMiddle {
     private static final int DAY = 11;
 
     public static void main(String[] args) throws FileNotFoundException {
-        countInspections("day" + DAY + "_input.txt");
+        countInspections("2022/day" + DAY + "_input.txt");
     }
 
     private static void countInspections(String fileName) throws FileNotFoundException {

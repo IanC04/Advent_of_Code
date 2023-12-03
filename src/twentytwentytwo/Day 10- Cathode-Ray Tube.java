@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -11,8 +13,8 @@ class CathodeRayTube {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println(signalStrengthsBounded("day" + DAY + "_input.txt"));
-        char[][] screen = createCRTScreen("day" + DAY + "_input.txt");
+        //System.out.println(signalStrengthsBounded("2022/day" + DAY + "_input.txt"));
+        char[][] screen = createCRTScreen("2022/day" + DAY + "_input.txt");
         for (char[] line : screen) {
             System.out.println(Arrays.toString(line));
         }

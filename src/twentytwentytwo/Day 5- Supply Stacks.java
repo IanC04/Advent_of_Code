@@ -1,3 +1,5 @@
+package twentytwentytwo;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -10,8 +12,8 @@ class SupplyStacks {
     private static ArrayList<Stack<Character>> crateStacks;
 
     public static void main(String[] args) throws FileNotFoundException {
-        //topCrates("day5_input.txt", false);
-        topCrates("day5_input.txt", true);
+        //topCrates("2022/day5_input.txt", false);
+        topCrates("2022/day5_input.txt", true);
         for (Stack<Character> crateStack : crateStacks) {
             System.out.print(crateStack.peek());
         }
