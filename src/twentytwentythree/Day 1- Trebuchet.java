@@ -38,10 +38,8 @@ class Trebuchet {
                 int first = getDigit(line, true);
                 int last = getDigit(line, false);
                 // System.out.println(first + " " + last);
-
                 sum += first * 10 + last;
             }
-
             return sum;
         }
     }
@@ -55,8 +53,7 @@ class Trebuchet {
 
                 for (String key : NUMBERS.keySet()) {
                     if (line.startsWith(key, i)) {
-                        int digit = NUMBERS.get(key);
-                        return digit;
+                        return NUMBERS.get(key);
                     }
                 }
             }
@@ -68,8 +65,7 @@ class Trebuchet {
 
                 for (String key : NUMBERS.keySet()) {
                     if (line.startsWith(key, i)) {
-                        int digit = NUMBERS.get(key);
-                        return digit;
+                        return NUMBERS.get(key);
                     }
                 }
             }
